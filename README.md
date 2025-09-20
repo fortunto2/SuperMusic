@@ -15,6 +15,13 @@
 5. **Orca** - https://100r.co/site/orca.html
 6. **NoiseCraft** - https://noisecraft.app/1735 - модульный синтез 
 7. **Surge Synthesizer** - https://surge-synthesizer.github.io/
+8. **AudioKit** - https://www.audiokit.io/ - Swift платформа для аудиосинтеза, обработки и анализа для iOS, macOS и tvOS с поддержкой MIDI
+    - **AudioKitEX** - C-backed AudioKit DSP для высокой производительности
+    - **AudioKitUI** - SwiftUI контролы и визуализация для AudioKit приложений
+    - **Tonic** - Swift библиотека для музыкальной теории
+    - **PianoRoll** - Touch-ориентированный piano roll для iOS и macOS
+    - **Keyboard** - SwiftUI музыкальная клавиатура
+    - **Microtonality** - Микротональные настройки
 
 ## Структура проекта
 

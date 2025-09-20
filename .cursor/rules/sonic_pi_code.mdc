@@ -1,0 +1,54 @@
+---
+description: Sonic Pi Code Examples
+globs: 
+alwaysApply: false
+---
+# Sonic Pi Code Examples
+
+## Retrowave Ambient (120 BPM)
+```ruby
+use_bpm 120
+
+with_fx :reverb, mix: 0.7, room: 0.9 do
+  with_fx :echo, mix: 0.4, decay: 8, phase: 0.5 do
+    live_loop :retro_chords do
+      use_synth :prophet
+      chord_progression = [
+        chord(:E3, :m7),
+        chord(:C3, :major7),
+        chord(:A3, :m7), 
+        chord(:D3, '7')
+      ]
+      
+      chord_progression.each do |c|
+        play c, release: 4, cutoff: 80, amp: 0.7
+        sleep 4
+      end
+    end
+  end
+end
+```
+
+## Interstellar-Inspired Ambient (60 BPM)
+```ruby
+use_bpm 60
+
+with_fx :reverb, mix: 0.9, room: 0.95 do
+  live_loop :organ_pattern do
+    use_synth :blade
+    notes = (ring :c4, :c4, :g3, :g3)
+    times = (ring 1, 1, 1, 1)
+    
+    play notes.tick, amp: 0.6
+    sleep times.look
+  end
+  
+  live_loop :clock_ticks, sync: :organ_pattern do
+    use_synth :beep
+    pattern = (ring 1, 0, 1, 0, 1, 0, 1, 0)
+    8.times do |i|
+      play :e5, release: 0.1, amp: 0.2 * pattern[i]
+      sleep 0.5
+    end
+  end
+end

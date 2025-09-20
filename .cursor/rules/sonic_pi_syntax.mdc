@@ -1,0 +1,32 @@
+---
+description: Sonic Pi Syntax Reference
+globs: 
+alwaysApply: false
+---
+# Sonic Pi Syntax Reference
+
+## Basic Building Blocks
+- `use_bpm n` - Sets the global tempo in beats per minute
+- `sleep n` - Pause for n beats
+- `play :note` - Play a note (e.g., `:c4`, `:e3`, `:g5`)
+- `sample :name` - Play a pre-recorded sound (e.g., `:bd_haus`, `:ambi_lunar_land`)
+
+## Synths and Effects
+- `use_synth :name` - Set the current synth (`:prophet`, `:fm`, `:tb303`, etc.)
+- `with_fx :name do ... end` - Apply an effect to a block of code
+- Common effects: `:reverb`, `:echo`, `:distortion`, `:slicer`
+
+## Patterns and Loops
+- `live_loop :name do ... end` - Create a continuously looping pattern
+- `n.times do ... end` - Repeat a block of code n times
+- `(ring ...)` - Create a ring buffer that loops continuously
+- `tick`, `look` - Advance a counter or look at current value
+- `chord(:c, :major)` - Create a chord (e.g., C major)
+- `scale(:e, :minor_pentatonic)` - Create a scale (E minor pentatonic)
+
+## Parameters
+- `amp:` - Volume (typically 0-1)
+- `pan:` - Stereo positioning (-1 to 1)
+- `attack:`, `release:`, `sustain:` - Envelope parameters
+- `cutoff:` - Filter cutoff frequency
+- `rate:` - Sample playback rate

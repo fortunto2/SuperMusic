@@ -1,0 +1,60 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Sonic Pi Music Project
+
+This project is for creating and experimenting with music using Sonic Pi.
+
+## Example Compositions
+
+- Retrowave ambient melody with 120 BPM
+- Hans Zimmer Interstellar-inspired ambient piece
+
+## Sonic Pi Tips
+
+- Use `live_loop` for creating continuous musical patterns
+- Synchronize loops with `sync: :loop_name`
+- Add atmosphere with effects like `:reverb` and `:echo`
+- Common synths: `:prophet`, `:blade`, `:tb303`, `:beep`
+- Use `sample` for pre-recorded sounds
+
+## Сохранение мелодий
+
+Каждая новая мелодия должна быть сохранена в отдельном файле:
+
+1. Создавайте файлы с расширением `.rb` в папке `compositions/` для каждой библиотеки своя папка. 
+2. Структура имени файла: `genre_style_bpm.rb` (например: `ambient_retrowave_120.rb`)
+3. Добавляйте в начало файла подробные комментарии:
+   - Название и стиль композиции
+   - Используемые инструменты и эффекты
+   - Структура композиции
+   - Дата создания
+4. Пример структуры комментариев:
+```ruby
+# Название: Retrowave Ambient
+# Стиль: Ретро-синтвейв, амбиент
+# BPM: 120
+# Дата создания: 2023-08-15
+# 
+# Используемые инструменты:
+# - :prophet (аккорды)
+# - :blade (пэды)
+# - :tb303 (бас)
+# - :dsaw (арпеджио)
+# 
+# Эффекты:
+# - :reverb (mix: 0.7, room: 0.9)
+# - :echo (mix: 0.4, decay: 8)
+#
+# Структура:
+# - Основные аккорды: Em7-Cmaj7-Am7-D7
+# - Арпеджио на минорной пентатонике
+# - Ретро-ударные и атмосферные эффекты
+```
+
+### MIDI PORT FOR SONIC
+
+use a - iac_driver_bus_1
+
